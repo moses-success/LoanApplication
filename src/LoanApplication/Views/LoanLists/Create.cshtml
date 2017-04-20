@@ -1,0 +1,64 @@
+@model LoanApplication.Models.Admin.LoanList
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>LoanList</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Bank" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Bank" class="form-control" />
+                <span asp-validation-for="Bank" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Documents" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Documents" class="form-control" />
+                <span asp-validation-for="Documents" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="LoanType" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="LoanType" class="form-control" />
+                <span asp-validation-for="LoanType" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Rate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Rate" class="form-control" />
+                <span asp-validation-for="Rate" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Years" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Years" class="form-control" />
+                <span asp-validation-for="Years" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

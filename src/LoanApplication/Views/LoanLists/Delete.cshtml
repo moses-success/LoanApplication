@@ -1,0 +1,53 @@
+@model LoanApplication.Models.Admin.LoanList
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>LoanList</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Bank)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bank)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Documents)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Documents)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LoanType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LoanType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Years)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Years)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>
