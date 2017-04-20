@@ -64,7 +64,7 @@ namespace LoanApplication.Controllers
                 { UserName = model.UserName, Email = model.Email };
 
                 var result = await _userManager.CreateAsync(user, model.Password);
-                 var 
+                 
 
                 if (result.Succeeded)
                 {
